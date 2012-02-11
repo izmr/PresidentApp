@@ -22,42 +22,10 @@ $statusParam = array(
 </head>
 <body>
 <?php if ($facebook->getUser()): ?>
+<?php var_dump($facebook->getUser()); ?>
 <a href="<?php echo $facebook->getLogoutUrl($loginParams); ?>">ログアウト</a><br />
-<?
-$fql = 'SELECT pic,name,birthday,sex from user where uid = me()';
-$me = $facebook->api(array('method' => 'fql.query', 'query' => $fql));
-?>
-<img src="<? echo $me[0]['pic'] ?>" /><br />
-Name: <? echo $me[0]['name'] ?><br />
-Birthday: <? echo $me[0]['birthday'] ?><br />
-Sex: <? echo $me[0]['sex'] ?>
-<hr />
-<? else: ?>
+<?php else: ?>
 <a href="<?php echo $facebook->getLoginUrl($loginParams); ?>">ログイン</a><br />
-<? endif; ?>
-<?php if ( $facebook->getUser() ) {
-	$user_id = $facebook->getUser();
-	$fql = 'select pic_small,name,sex,birthday_date from user where uid IN (SELECT uid2 from friend where uid1 = me()) and birthday_date != ""';
-	$ret = $facebook->api(
-		array('method' => 'fql.query', 
-		'query' => $fql)); ?>
-<table>
-<tr>
-<th>Picture</th>
-<th>Name</th>
-<th>Birthday</th>
-<th>Sex</th>
-</tr>
-<? foreach ( $ret as $user ) { ?>
-<tr>
-<td><img src="<? echo $user['pic_small'] ?>" /></td>
-<td><? echo $user['name'] ?></td>
-<td><? echo $user['birthday_date'] ?></td>
-<td><? echo $user['sex'] ?></td>
-</tr>
-
-<?} ?>
-</table>
-<? } ?>
+<?php endif; ?>
 </body>
 </html>
