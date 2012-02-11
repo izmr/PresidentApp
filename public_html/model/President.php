@@ -10,6 +10,9 @@ class President extends MySQL
     'level' => 0,
     'point' => 0,
     'pic' => '',
-    'updatedAt' => 0
+    'updated_at' => 0,
+    'sex' => 0, # 0 = male, 1 = female
+    'used_money' => 0,
+    'princess_id' => 0
   );
 }

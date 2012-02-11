@@ -14,6 +14,24 @@ class MySQL
     );
   }
 
+  public function update( $data, $condition ) {
+    $sql = "UPDATE " . $this->table . " SET ";
+    foreach ( $data as $key => $value ) {
+      $sql .= " $key='$value',";
+    }
+    $sql = rtrim($sql, ',');
+
+    if ( $condition ) {
+      $sql .= " WHERE ";
+      $and = false;
+      foreach ($condition as $key => $value) {
+        if ($and) $sql .= ' AND ';
+        $sql .= " $key='$value' ";
+      }
+    }
+    return $this->mysql->query($sql);
+  }
+
   public function findBy ( $condition ) {
     $sql = "SELECT * FROM " . $this->table;
     if ( $condition ) {
@@ -21,7 +39,7 @@ class MySQL
       $and = false;
       foreach ($condition as $key => $value) {
         if ($and) $sql .= ' AND ';
-        $sql .= " $key = $value ";
+        $sql .= " $key='$value' ";
       }
     }
     return $this->mysql->query($sql);
@@ -51,7 +69,7 @@ class MySQL
       $sql .= ') ';
       $sql .= " VALUES ( ";
       foreach ( $insertData as $value ) {
-        $sql .= "'$value'" . ",";
+        $sql .= "'$value',";
       }
       $sql = rtrim($sql, ',');
       $sql .= ') ';
@@ -66,7 +84,7 @@ class MySQL
       $and = false;
       foreach ($condition as $key => $value) {
         if ($and) $sql .= ' AND ';
-        $sql .= " $key = $value ";
+        $sql .= " $key='$value' ";
       }
     }
     return $this->mysql->query($sql);
