@@ -1,0 +1,1 @@
+DESC test_table;
