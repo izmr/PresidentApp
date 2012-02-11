@@ -2,10 +2,17 @@
 
 #president-page {
   #profile {
-    font-size: 14px;
+    font-size: 12px;
 
     .icon {
       margin: 5px;
+    }
+
+    .name {
+      display: inline;
+      font-size: 16px;
+      font-weight: bold;
+      margin-left: 5px;
     }
 
     .information {

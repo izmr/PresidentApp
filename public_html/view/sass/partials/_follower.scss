@@ -17,35 +17,47 @@
 
 .follower-card {
   @include border-radius(10px);
-  padding: 6px 0 12px;
-  width: $card-width;
-  height: $card-height - 18px;
+  border: 3px solid #fca800;
+  padding-top: 2px;
+  width: $card-width - 6px;
+  height: $card-height - 8px;
   background-color: $card-bg-color;
-  color: black;
-  line-height: 1.1;
+  color: #555;
+  line-height: 1;
 
   .icon {
     display: block;
-    margin: 0 auto;
+    margin: 2px auto;
   }
 
   h1 {
-    max-width: $card-width;
-    margin-top: 10px;
-    font-size: 14px;
+    text-align: left;
+    width: 70px;
+    height: 1em;
+    margin: 0 auto;
+    font-size: 12px;
     overflow: hidden;
+  }
+
+  p {
+    font-size: 10px;
   }
 }
 
 .followers,
 .princesses {
+  @include border-radius(10px);
+  @include box-shadow(darken($base-bg-color, 10), 0, 0, 8px);
+  width: 288px;
+  margin: 0 auto;
+
   li:first-child article {
     @include border-top-radius(10px);
+    border-top: 1px solid darken($base-border-color, 20);
   }
 
   li:last-child article {
     @include border-bottom-radius(10px);
-    border-bottom: 0;
   }
 
   a {
@@ -58,13 +70,18 @@
   $color: $base-bg-color;
   @include background(linear-gradient(lighten($color, 30),
     lighten($color, 20)));
-  border-bottom: 1px solid $base-border-color;
+  @include box-shadow(lighten($base-bg-color, 50) 0 0 5px inset);
+  @include text-shadow(darken($base-bg-color, 20), 1px, 1px, 2px);
+  border: 1px solid darken($base-border-color, 10);
+  border-top: 0;
   font-size: 12px;
-  padding: 5px;
+  padding: 8px;
   line-height: 1.2;
+  color: white;
 
   .information {
     @include inline-block;
+    width: 200px;
     margin-left: 5px;
     padding: 3px;
 
@@ -76,6 +93,12 @@
   .name {
     display: inline;
     font-size: 16px;
+    font-weight: bold;
+    margin-left: 5px;
+
+    &:first-child {
+      margin-left: 0;
+    }
   }
 }
 

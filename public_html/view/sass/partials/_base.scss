@@ -7,7 +7,7 @@ html {
 
 // body要素スタイル
 body {
-  @include background(linear-gradient(lighten($base-bg-color, 25), $base-bg-color));
+  @include background(linear-gradient(lighten(#ff519f, 10), $base-bg-color));
   -webkit-text-size-adjust: none;
   color: $base-font-color;
   line-height: $base-line-height;

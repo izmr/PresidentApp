@@ -1,0 +1,38 @@
+@charset 'utf-8';
+
+$margin: 95px;
+
+#battle-page {
+  #field {
+    position: relative;
+    padding: 10px 0;
+    width: $battle-field-width;
+    height: $battle-field-height - 20px;
+    margin: 0 auto;
+
+    .follower-card {
+      position: absolute;
+    }
+
+    #princess {
+      left: $battle-field-width / 2 - $card-width / 2;
+    }
+
+    #follower1 {
+      top: 165px;
+      left: 10px;
+    }
+
+    #follower2 {
+      top: 165px;
+      left: $battle-field-width / 2 - $card-width / 2;
+    }
+
+    #follower3 {
+      top: 165px;
+      left: 198px;
+    }
+  }
+}
+
+

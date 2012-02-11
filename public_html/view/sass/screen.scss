@@ -6,6 +6,7 @@
 @import "compass/reset";
 @import "compass";
 
+@import 'modules/mixins';
 @import 'partials/vars';
 @import "partials/base";
 @import "partials/follower";
@@ -14,5 +15,6 @@
 @import "partials/top";
 @import "partials/president";
 @import "partials/deck";
+@import "partials/battle";
 
 
