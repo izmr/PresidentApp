@@ -66,24 +66,19 @@ class Job
  }
   
   public static function getJob($user_id) {
-    return getTableValue($user_id, self::$job_table, 0);
+    return self::getTableValue($user_id, self::$job_table, 0);
   }
   public static function getMood($user_id) {
-    return getTableValue($user_id, self::$mood_table, 0);
+    return self::getTableValue($user_id, self::$mood_table, 0);
   }
   public static function getPosition($user_id) {
-    return getTableValue($user_id, self::$position_table, 0);
+    return self::getTableValue($user_id, self::$position_table, 0);
   }
   
   public static function getPower($user_id){
-    return getParamValue($user_id, 1);
+    return self::getParamValue($user_id, 1);
  }
  public static function getMoney($user_id){
-    return getParamValue($user_id, 2);
+    return self::getParamValue($user_id, 2);
  }
-  
-  
-  
-  
-
 }
