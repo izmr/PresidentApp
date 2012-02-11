@@ -24,8 +24,8 @@ foreach ( $followers as $follower ) {
     $data = array(
       'facebook_id' => $uid,
       'name' => $follower['name'],
-      'power' => rand(0, 100),
-      'money' => rand(0, 100),
+      'power' => Job::getPower(),
+      'money' => Job::getMoney(),
       'pic' => $follower['pic'],
       'sex' => $follower['sex'] == 'male' ? 0 : 1,
       'job_name' => Job::getJob()
