@@ -7,9 +7,10 @@ $facebook = new Facebook(array(
 ));
 
 $user = $facebook->getUser();
+?>
 
-if ( $user ) {
-  echo "login!";
-} else {
-  $loginUrl = $facebook->getLoginUrl();
-}
+<?php if ( !$user ): ?>
+<a href="<?php echo $facebook->getLoginUrl() ?>">Login</a>
+<?php else: ?>
+<a href="<?php echo $facebook->getLogoutUrl() ?>">Logout</a>
+<?php endif; ?>
