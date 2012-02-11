@@ -12,18 +12,18 @@
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/view/img/h/apple-touch-icon.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/view/img/m/apple-touch-icon.png">
-  <link rel="apple-touch-icon-precomposed" href="/view/img/l/apple-touch-icon-precomposed.png">
-  <link rel="shortcut icon" href="/view/img/l/apple-touch-icon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/img/h/apple-touch-icon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/img/m/apple-touch-icon.png">
+  <link rel="apple-touch-icon-precomposed" href="/assets/img/l/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/assets/img/l/apple-touch-icon.png">
   <meta http-equiv="cleartype" content="on">
-  <link rel="stylesheet" href="/view/css/screen.css">
-  <script src="/view/js/libs/modernizr-2.0.6.min.js"></script>
+  <link rel="stylesheet" href="/assets/css/screen.css">
+  <script src="/assets/js/libs/modernizr-2.0.6.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
-  <script src="/view/js/helper.js"></script>
+  <script src="/assets/js/helper.js"></script>
   <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
-  <script type="text/javascript" src="/view/js/girl.js"></script>
+  <script type="text/javascript" src="/assets/js/girl.js"></script>
 </head>
 <body id="top-page">
   <div id="container">
