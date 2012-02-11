@@ -9,6 +9,7 @@ class President extends MySQL
     'name' => 'No name',
     'level' => 0,
     'point' => 0,
-    'pic' => ''
+    'pic' => '',
+    'updatedAt' => 0
   );
 }
