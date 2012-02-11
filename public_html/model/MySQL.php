@@ -55,8 +55,20 @@ class MySQL
       }
       $sql = rtrim($sql, ',');
       $sql .= ') ';
-var_dump($sql);
       return $this->mysql->query($sql);
     }
+  }
+
+  public function remove( $condition ) {
+    $sql = "DELETE FROM " . $this->table;
+    if ( $condition ) {
+      $sql .= " WHERE ";
+      $and = false;
+      foreach ($condition as $key => $value) {
+        if ($and) $sql .= ' AND ';
+        $sql .= " $key = $value ";
+      }
+    }
+    return $this->mysql->query($sql);
   }
 }

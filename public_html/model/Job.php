@@ -12,19 +12,10 @@ class Job
 //雰囲気
   public static $mood_table = array("いたいけない", 
   "けむったい", "神々しい", "さしでがましい", "じゃすいぶかい", 
-  "トゲトゲしい", "ナウい", "やかましい", "わずらわしい", "どちらでもない");
-  
-  
-  public static function getJob($user_id) {
-    $user_num = intval($user_id);
-    return self::$job_table[$user_num % count(self::$job_table)];
-  }
-  public static function getMood($user_id) {
-    $user_num = intval($user_id);
-    return self::$mood_table[$user_num % count(self::$mood_table)];
-  }
-  public static function getPosition($user_id) {
-    $user_num = intval($user_id);
-    return self::$position_table[$user_num % count(self::$position_table)];
+  "トゲトゲしい", "ナウい", "やかましい", "わずらわしい", "どちらでもない",);
+  public static function getJob() {
+    return self::$mood_table[ rand(0, count(self::$mood_table)) ]
+    . self::$position_table[ rand(0, count(self::$position_table)) ]
+    . self::$job_table[ rand(0, count(self::$job_table)) ];
   }
 }
