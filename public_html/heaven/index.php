@@ -65,9 +65,14 @@ echo "<br />";
 ?>
 
 
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+</script>
 <script type="text/javascript">
 function getJson(){
-	alert( 1 );
+//	alert( 1 );
+	$.getJSON("/heaven/attack.php", function(json){
+		console.log( json );
+	});
 }
 </script>
 

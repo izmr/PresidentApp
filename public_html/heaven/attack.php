@@ -45,12 +45,31 @@ foreach( $party as $party_member ) {
 				array_push($moneies, '10' );
 
 
+// DAMAGE算出
+
+				// 仮データ
+				$damages = array();
+				array_push($damages, 30 );
+				array_push($damages, 20 );
+				array_push($damages, 10 );
+
+
+// SCORE算出
+
+				// 仮データ
+				$scores = array();
+				array_push($scores, 30 );
+				array_push($scores, 20 );
+				array_push($scores, 10 );
+
+
+
 // make content
 $total_money = 0;
 foreach( $moneies as $money ) {
 	$total_money += $money;
 }
-$content = array( 'used_money' => $total_money );
+$content = array( 'used_money' => $total_money, 'damage' => $damages, 'score' => $scores );
 
 // response by json
 echo json_encode( $content );
