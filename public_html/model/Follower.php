@@ -1,6 +1,6 @@
 <?php
-require dirname(__FILE__) . '/MySQL.php';
-require dirname(__FILE__) . '/Job.php';
+require_once dirname(__FILE__) . '/MySQL.php';
+require_once dirname(__FILE__) . '/Job.php';
 
 class Follower extends MySQL
 {
