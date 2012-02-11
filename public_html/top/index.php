@@ -1,5 +1,5 @@
 <?php
-require_once("../vender/php-sdk/src/facebook.php");
+require_once("../vendor/php-sdk/src/facebook.php");
 
 $appId = '346346428729240';
 $secret = 'ea5fd9a005c0becd9e5277864bdf5417';
