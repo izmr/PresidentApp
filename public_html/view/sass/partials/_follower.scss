@@ -1,0 +1,82 @@
+@charset 'utf-8';
+
+.follower-cards {
+  text-align: center;
+
+  li {
+    @include inline-block;
+
+    &.blank {
+      @include border-radius(10px);
+      width: $card-width - 2px;
+      height: $card-height - 2px;
+      border: 1px solid $card-bg-color;
+    }
+  }
+}
+
+.follower-card {
+  @include border-radius(10px);
+  padding: 6px 0 12px;
+  width: $card-width;
+  height: $card-height - 18px;
+  background-color: $card-bg-color;
+  color: black;
+  line-height: 1.1;
+
+  .icon {
+    display: block;
+    margin: 0 auto;
+  }
+
+  h1 {
+    max-width: $card-width;
+    margin-top: 10px;
+    font-size: 14px;
+    overflow: hidden;
+  }
+}
+
+.followers,
+.princesses {
+  li:first-child article {
+    @include border-top-radius(10px);
+  }
+
+  li:last-child article {
+    @include border-bottom-radius(10px);
+    border-bottom: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.princess,
+.follower {
+  $color: $base-bg-color;
+  @include background(linear-gradient(lighten($color, 30),
+    lighten($color, 20)));
+  border-bottom: 1px solid $base-border-color;
+  font-size: 12px;
+  padding: 5px;
+  line-height: 1.2;
+
+  .information {
+    @include inline-block;
+    margin-left: 5px;
+    padding: 3px;
+
+    > div:first-child {
+      margin-bottom: 5px;
+    }
+  }
+
+  .name {
+    display: inline;
+    font-size: 16px;
+  }
+}
+
+
