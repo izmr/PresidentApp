@@ -20,7 +20,7 @@ class Follower extends MySQL
   }
 
   public function setJobAtRandom() {
-    $this->schema['job_name'] = Job::getJob();
+    $this->schema['job_name'] = Job::getJob('1234');
     return $this->schema['job_name'];
   }
 }

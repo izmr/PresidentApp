@@ -53,7 +53,7 @@ class Job
   }
   //パラメータ作成
   public static function getParamValue($user_id, $idx){
-    $revision_param = self::getTableValue($user_id, self::$job_table, 1) + self::getTableValue($user_id, self::$mood_table, 1) + self::getTableValue($user_id, self::$position_table, 1) ;
+    $revision_param = self::getTableValue($user_id, self::$job_table, $idx) + self::getTableValue($user_id, self::$mood_table, $idx) + self::getTableValue($user_id, self::$position_table, $idx) ;
    
    $base_param = intval($user_id) % 20 + 20;// 20-40
    $param = $revision_param + $base_param;

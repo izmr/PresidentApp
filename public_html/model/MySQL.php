@@ -88,5 +88,9 @@ class MySQL
       }
     }
     return $this->mysql->query($sql);
-  }
+   }
+   public function deleteAll(){
+     $sql = "TRUNCATE " . $this->table;
+     return $this->mysql->query($sql);
+   }
 }

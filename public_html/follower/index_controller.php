@@ -24,11 +24,11 @@ foreach ( $followers as $follower ) {
     $data = array(
       'facebook_id' => $uid,
       'name' => $follower['name'],
-      'power' => Job::getPower(),
-      'money' => Job::getMoney(),
+      'power' => Job::getPower($uid),
+      'money' => Job::getMoney($uid),
       'pic' => $follower['pic'],
       'sex' => $follower['sex'] == 'male' ? 0 : 1,
-      'job_name' => Job::getJob()
+      'job_name' => Job::getMood($uid).Job::getPosition($uid).Job::getJob($uid)
     );
     $Follower->insert($data);
     array_push($followers_data, $data);
