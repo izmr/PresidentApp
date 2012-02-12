@@ -4,7 +4,7 @@
     var imgPath = $(this).find('.icon').attr('src');
     var power = $(this).find('.power .value').text();
     var money = $(this).find('.money .value').text();
-    var id = $(this).find('.id').text();
+    var id = $(this).find('.facebook-id').text();
     var input = $('#followers-select-form').find('input[value=""]:first');
 
     if (input.length) {
