@@ -4,11 +4,12 @@
  * 未ログインの場合はlogin.phpにリダイレクトされる
  * また、Partyが未選択の場合は自動的にFollower選択画面に遷移
  */
-require dirname(__FILE__) . '/../facebook.php';
-require dirname(__FILE__) . '/../model/President.php';
-require dirname(__FILE__) . '/../model/Princess.php';
-require dirname(__FILE__) . '/../model/Party.php';
-require dirname(__FILE__) . '/../model/Follower.php';
+require_once dirname(__FILE__) . '/../facebook.php';
+require_once dirname(__FILE__) . '/../model/President.php';
+require_once dirname(__FILE__) . '/../model/Princess.php';
+require_once dirname(__FILE__) . '/../model/Party.php';
+require_once dirname(__FILE__) . '/../model/Follower.php';
+require_once dirname(__FILE__) . '/../calc_used_money.php';
 
 // President,Princess,Party モデルを用意
 $President = new President();
@@ -31,7 +32,7 @@ if ($result->num_rows == 0) {
     'facebook_id' => $r[0]['uid'],
     'name' => $r[0]['name'],
     'pic' => $r[0]['pic_small'],
-    'updatedAt' => mktime(),
+    'updated_at' => time(),
     'point' => 0,
     'level' => 0,
     'sex' => $r[0]['sex'] == 'male' ? 0 : 1

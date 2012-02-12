@@ -34,16 +34,21 @@
       <section id="deck">
         <h1>フォロワー</h1>
         <ul class="follower-cards">
+        <?php for ($i = 0; $i < 3; $i++): ?>
+        <?php if (array_key_exists($i, $party)): ?>
+        <?php $p = $party[$i]; ?>
           <li>
             <article class="follower-card">
-              <h1>岩野 尚吾</h1>
-              <img class="icon big" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-snc4/276053_100001816136455_377978080_q.jpg" />
-              <p class="power">Power: 100</p>
-              <p class="money">Money: 100</p>
+              <h1><?php echo $p['name'] ?></h1>
+              <img class="icon big" src="<?php  echo $p['pic']?>" />
+              <p class="power">Power: <?php echo $p['power'] ?></p>
+              <p class="money">Money: <?php echo $p['money'] ?></p>
             </article>
           </li>
+        <?php else: ?>
           <li class="blank"></li>
-          <li class="blank"></li>
+        <?php endif; ?>
+        <?php endfor; ?>
         </ul>
       </section>
       <section id="followers-wrapper">
@@ -77,9 +82,9 @@
       </section>
       <p>
         <form id="followers-select-form" method="POST" action="/follower/add.php">
-          <input type="hidden" name="follower_id1" value="<?php echo $party[0]['follower_id'] ?>">
-          <input type="hidden" name="follower_id2" value="<?php echo $party[1]['follower_id'] ?>">
-          <input type="hidden" name="follower_id3" value="<?php echo $party[2]['follower_id'] ?>">
+          <input type="hidden" name="follower_id1" value="<?php echo $party[0]['facebook_id'] ?>">
+          <input type="hidden" name="follower_id2" value="<?php echo $party[1]['facebook_id'] ?>">
+          <input type="hidden" name="follower_id3" value="<?php echo $party[2]['facebook_id'] ?>">
           <input type="submit" class="button" value="OK" />
         </form>
       </p>

@@ -9,6 +9,7 @@ require_once dirname(__FILE__) . '/../model/Party.php';
 $Party = new Party();
 $president_id = $facebook->getUser();
 
+// follower_ids = Facebook ID
 $follower_ids = array();
 array_push($follower_ids, $_POST['follower_id1']);
 array_push($follower_ids, $_POST['follower_id2']);

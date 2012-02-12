@@ -1,6 +1,6 @@
 <?php
-require dirname(__FILE__) . '/const.php';
-require dirname(__FILE__) . '/vendor/php-sdk/src/facebook.php';
+require_once dirname(__FILE__) . '/const.php';
+require_once dirname(__FILE__) . '/vendor/php-sdk/src/facebook.php';
 
 // Facebookオブジェクトを生成
 $appId = APP_ID;

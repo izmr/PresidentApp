@@ -5,6 +5,7 @@
 require_once dirname(__FILE__) . '/../facebook.php';
 require_once dirname(__FILE__) . '/../model/Follower.php';
 require_once dirname(__FILE__) . '/../model/Party.php';
+require_once dirname(__FILE__) . '/../calc_used_money.php';
 
 // Follower,Party Model用意
 $Follower = new Follower();

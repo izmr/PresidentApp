@@ -3,8 +3,8 @@
  * 未ログインの者は全てここにリダイレクトされる
  * ログインしたらpresident/index.phpにリダイレクト
  */
-require dirname(__FILE__) . '/../const.php';
-require dirname(__FILE__) . '/../vendor/php-sdk/src/facebook.php';
+require_once dirname(__FILE__) . '/../const.php';
+require_once dirname(__FILE__) . '/../vendor/php-sdk/src/facebook.php';
 
 $appId = APP_ID;
 $secret = APP_SECRET;
