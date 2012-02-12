@@ -51,10 +51,11 @@ class Job
     $user_num = intval($user_id);
     return $tbl[$user_num % count($tbl)][$idx];
   }
+  //パラメータ作成
   public static function getParamValue($user_id, $idx){
     $revision_param = self::getTableValue($user_id, self::$job_table, 1) + self::getTableValue($user_id, self::$mood_table, 1) + self::getTableValue($user_id, self::$position_table, 1) ;
    
-   $base_param = intval($user_id) % 80;
+   $base_param = intval($user_id) % 20 + 20;// 20-40
    $param = $revision_param + $base_param;
    if($param > 100){
       return 100;
