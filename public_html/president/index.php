@@ -74,7 +74,7 @@
           <?php $p = $party[$index] ?>
           <li>
             <article class="follower-card">
-              <h1><?php $p['name'] ?></h1>
+              <h1><?php echo $p['name'].'san' ?></h1>
               <img class="icon big" src="<?php echo $p['pic'] ?>" />
               <p class="power">Power: <?php echo $p['power'] ?></p>
               <p class="money">Money: <?php echo $p['money'] ?></p>
