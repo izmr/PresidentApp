@@ -365,9 +365,11 @@ h1.subhead, h2.subhead, h3.subhead, h4.subhead, h5.subhead, h6.subhead {
 
 /* line 3, ../sass/partials/_layout.scss */
 #main {
+  max-width: 300px;
+  margin: 0 auto;
   padding: 10px;
 }
-/* line 6, ../sass/partials/_layout.scss */
+/* line 8, ../sass/partials/_layout.scss */
 #main section {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c11a67), color-stop(100%, #94144f));
   background: -webkit-linear-gradient(#c11a67, #94144f);
@@ -382,7 +384,7 @@ h1.subhead, h2.subhead, h3.subhead, h4.subhead, h5.subhead, h6.subhead {
   margin-bottom: 8px;
   border: 1px solid #d8669a;
 }
-/* line 13, ../sass/partials/_layout.scss */
+/* line 15, ../sass/partials/_layout.scss */
 #main section > h1 {
   line-height: 1;
   font-size: 14px;
@@ -390,16 +392,16 @@ h1.subhead, h2.subhead, h3.subhead, h4.subhead, h5.subhead, h6.subhead {
   margin: 3px 0 10px;
   text-align: center;
 }
-/* line 20, ../sass/partials/_layout.scss */
+/* line 22, ../sass/partials/_layout.scss */
 #main section > h1:before {
   content: '[';
 }
-/* line 24, ../sass/partials/_layout.scss */
+/* line 26, ../sass/partials/_layout.scss */
 #main section > h1:after {
   content: ']';
 }
 
-/* line 31, ../sass/partials/_layout.scss */
+/* line 33, ../sass/partials/_layout.scss */
 #global-header {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #222222), color-stop(100%, #000000));
   background: -webkit-linear-gradient(#222222, #000000);
@@ -417,7 +419,7 @@ h1.subhead, h2.subhead, h3.subhead, h4.subhead, h5.subhead, h6.subhead {
   border-bottom: 1px solid #ec6fa8;
 }
 
-/* line 43, ../sass/partials/_layout.scss */
+/* line 45, ../sass/partials/_layout.scss */
 #logo {
   text-indent: -119988px;
   overflow: hidden;
@@ -434,14 +436,14 @@ h1.subhead, h2.subhead, h3.subhead, h4.subhead, h5.subhead, h6.subhead {
   margin: 0 auto;
 }
 
-/* line 53, ../sass/partials/_layout.scss */
+/* line 55, ../sass/partials/_layout.scss */
 .icon {
   border: 1px solid gray;
   vertical-align: middle;
   width: 50px;
   height: 50px;
 }
-/* line 59, ../sass/partials/_layout.scss */
+/* line 61, ../sass/partials/_layout.scss */
 .icon.big {
   width: 70px;
   height: 70px;
