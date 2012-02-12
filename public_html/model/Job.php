@@ -47,12 +47,12 @@ class Job
   );
   
   
-  public static function getTableValue($user_id, $tbl, $idx) {
+  static function getTableValue($user_id, $tbl, $idx) {
     $user_num = intval($user_id);
     return $tbl[$user_num % count($tbl)][$idx];
   }
   public static function getParamValue($user_id, $idx){
-    $revision_param = getTableValue($user_id, self::$job_table, 1) +getTableValue($user_id, self::$mood_table, 1) +getTableValue($user_id, self::$position_table, 1) ;
+    $revision_param = self::getTableValue($user_id, self::$job_table, 1) + self::getTableValue($user_id, self::$mood_table, 1) + self::getTableValue($user_id, self::$position_table, 1) ;
    
    $base_param = intval($user_id) % 80;
    $param = $revision_param + $base_param;
