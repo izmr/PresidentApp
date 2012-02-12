@@ -41,6 +41,8 @@ if ($result->num_rows == 0) {
 } else {
   $me = $result->fetch_assoc();
 }
+$me['power'] = 0;
+$me['money'] = 0;
 
 // Party情報取得を試みる
 $party = array();
@@ -51,7 +53,11 @@ if ( $partyResult->num_rows > 0 ) {
   while ($p = $partyResult->fetch_assoc()) {
     $follower = $Follower->findBy(array('facebook_id' => $p['follower_id']));
     $f = $follower->fetch_assoc();
-    if ( !is_null($f) ) array_push($party, $f);
+    if ( !is_null($f) ) {
+      array_push($party, $f);
+      $me['power'] += $f['power'];
+      $me['money'] += $f['money'];
+    }
   }
 }
 
