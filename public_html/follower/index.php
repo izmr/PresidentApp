@@ -37,7 +37,7 @@
         <?php for ($i = 0; $i < 3; $i++): ?>
         <?php if (array_key_exists($i, $party)): ?>
         <?php $p = $party[$i]; ?>
-          <li>
+          <li class="_blank">
             <article class="follower-card">
               <h1><?php echo $p['name'] ?></h1>
               <img class="icon big" src="<?php  echo $p['pic']?>" />
