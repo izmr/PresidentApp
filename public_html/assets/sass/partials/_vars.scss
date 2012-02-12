@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+
+// サイト定義
+$base-width: 480px;
+$base-bg-color: #94144f;
+
+// フォント定義
+$base-font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro',
+    'メイリオ', 'Mayryo', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+$base-font-family-serif: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro',
+    'ＭＳ Ｐ明朝', 'MS PMincho', serif;
+$base-font-color: #ffc4de;
+$base-font-size-pixel: 13px;
+$base-font-size: 100%;
+$base-line-height: 1.6em;
+
+// リンク定義
+$link-color: white;
+$link-hover-color: white;
+$link-active-color: white;
+$link-visited-color: white;
+$link-focus-color: white;
+
+// 枠線
+$base-border-color: #ce3d7f;
+
+// カード
+$card-bg-color: white;
+$card-width: 84px;
+$card-height: 118px;
+
+// 戦闘フィールド
+$battle-field-width: 290px;
+$battle-field-height: 290px;
+
