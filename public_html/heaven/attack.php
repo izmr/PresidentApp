@@ -1,6 +1,8 @@
 <?php
-//header('Content-type: application/json');
+header('Content-type: application/json');
+require_once( dirname(__FILE__) . '/index_controller.php' );
 
+/*
 require_once( dirname(__FILE__) . '/../facebook.php' );
 require_once( dirname(__FILE__) . "/../model/President.php");
 require_once( dirname(__FILE__) . "/../model/Follower.php");
@@ -16,8 +18,8 @@ $facebook_id = $facebook->getUser();
 // President情報の取得
 $presidents = $President->findBy(array('facebook_id' => $facebook_id));
 if ( $presidents->num_rows == 0 ) {
-	echo 'president取得の失敗なう';
-	die;
+  echo 'president取得の失敗なう';
+  die;
 }
 $president = $presidents->fetch_assoc();
 
@@ -33,41 +35,45 @@ while ($row = $result->fetch_assoc()) {
 // Presidentに紐付くPartyに紐付くFollowersのmoneies情報を取得
 $moneies = array();
 foreach( $party as $party_member ) {
-	$result = $Follower->findBy(array('follower_id' => $party_member['id']));
-	while ($row = $result->fetch_assoc()) {
-		array_push($moneies, $row['money']);
-	}
+  $result = $Follower->findBy(array('follower_id' => $party_member['id']));
+  while ($row = $result->fetch_assoc()) {
+    array_push($moneies, $row['money']);
+  }
 }
 
-				// 仮データ
-				array_push($moneies, '30' );
-				array_push($moneies, '20' );
-				array_push($moneies, '10' );
-
+/*
+        // 仮データ
+        array_push($moneies, '30' );
+        array_push($moneies, '20' );
+        array_push($moneies, '10' );
 
 // DAMAGE算出
 
-				// 仮データ
-				$damages = array();
-				array_push($damages, 30 );
-				array_push($damages, 20 );
-				array_push($damages, 10 );
+        // 仮データ
+        $damages = array();
+        array_push($damages, 30 );
+        array_push($damages, 20 );
+        array_push($damages, 10 );
 
 
 // SCORE算出
 
-				// 仮データ
-				$scores = array();
-				array_push($scores, 30 );
-				array_push($scores, 20 );
-				array_push($scores, 10 );
-
+        // 仮データ
+        $scores = array();
+        array_push($scores, 30 );
+        array_push($scores, 20 );
+        array_push($scores, 10 );
+*/
 
 
 // make content
 $total_money = 0;
-foreach( $moneies as $money ) {
-	$total_money += $money;
+$damages = array();
+$scores = array();
+foreach( $followers as $follower ) {
+  $total_money += $follower['money'];
+  array_push( $damages, $follower["power"] );
+  array_push( $scores, $follower["power"] );
 }
 $content = array( 'used_money' => $total_money, 'damage' => $damages, 'score' => $scores );
 

@@ -1,21 +1,5 @@
-<?php
-//require_once( dirname(__FILE__) . '/../facebook.php' );
-require_once( dirname(__FILE__) . '/index_controller.php' );
+<?php require_once( dirname(__FILE__) . '/index_controller.php' ); ?>
 
-$appId = '346346428729240';
-$secret = 'ea5fd9a005c0becd9e5277864bdf5417';
-$config = array();
-$config['appId'] = $appId;
-$config['secret'] = $secret;
-
-$facebook = new Facebook($config);
-$loginParams = array('scope' => 'user_birthday');
-$statusParam = array(
-  'ok_session' => 'Now Login',
-  'no_user' => 'No User',
-  'no_session' => 'No Session'
-);
-?>
 <html>
 <head>
 <title>Facebook Test</title>
@@ -41,6 +25,7 @@ echo "<br />";
 <table>
 <tr>
 <td><img src="<?php echo $princess['pic'] ?>"></td>
+<td>【姫】</td>
 <td>name:<?php echo $princess['name'] ?></td>
 <td>score:<?php echo $princess['score'] ?></td>
 <td>next_score:<?php echo $princess['next_score'] ?></td>
@@ -52,6 +37,7 @@ echo "<br />";
 <table>
 <tr>
 <td><img src="<?php echo $follower['pic'] ?>"></td>
+<td>【仲間】</td>
 <td>name:<?php echo $follower['name'] ?></td>
 <td>power:<?php echo $follower['power'] ?></td>
 <td>money:<?php echo $follower['money'] ?></td>
@@ -69,14 +55,18 @@ echo "<br />";
 </script>
 <script type="text/javascript">
 function getJson(){
-//	alert( 1 );
-	$.getJSON("/heaven/attack.php", function(json){
-		console.log( json );
-	});
+  $.getJSON("/heaven/attack.php", function(json){
+    console.log( json );
+  });
 }
 </script>
 
+<br />
+合計金額:<?php echo $total_money?>
+<br />
+<br />
 <a style="color:#069" onclick="getJson()">あたっく</a>
+<br />
 
 【HELPボタン】（←これどーすんの？）
 
