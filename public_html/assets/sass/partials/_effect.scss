@@ -1,0 +1,129 @@
+@charset 'utf-8';
+
+@import "compass/utilities/general/clearfix";
+
+$margin: 95px;
+$adTime: 3s; // animation time
+
+// heart
+#heartAttack {
+  @include text-border(white);
+  color: #f780b6;
+  font-size: 1.5em;
+
+  li:nth-of-type(1){
+    position: relative;
+    -webkit-animation: move1 $adTime linear;
+  }
+  li:nth-of-type(2){
+    position: relative;
+    -webkit-animation: move2 $adTime linear;
+  }
+  li:nth-of-type(3){
+    position: relative;
+    -webkit-animation: move3 $adTime linear;
+  }
+}
+
+$sabun: 50px;
+$x1: -20px;
+$y1: -30px;
+
+$x2: 20px;
+$y2: -50px;
+
+$x3: 30px;
+$y3: -100px;
+
+@-webkit-keyframes move1{
+  from{-webkit-transform: translate($x1, $y1) rotate(0deg); }
+  to {-webkit-transform: translate($x1, $y1 - $sabun) rotate(360deg);}
+}
+
+@-webkit-keyframes move2{
+  from{-webkit-transform: translate($x2,$y2) rotate(0deg); }
+  to {-webkit-transform: translate($x2,$y2 - $sabun) rotate(360deg);}
+}
+
+@-webkit-keyframes move3{
+  from{-webkit-transform: translate($x3,$y3) rotate(0deg); }
+  to {-webkit-transform: translate($x3,$y3 - $sabun) rotate(360deg);}
+}
+
+
+// coin
+#coinAttack {
+  img {
+    position: absolute;
+    -webkit-border-radius: 50px;
+    width: 20px;
+  }
+
+  li {
+    -webkit-animation: coin $adTime linear;
+  }
+}
+
+$coiny: -100px;
+$coinEndy: 30px;
+
+@-webkit-keyframes coin {
+  from { -webkit-transform: translateY($coiny - 10);}
+  to { -webkit-transform: translateY($coinEndy - 10);}
+}
+
+//happy
+
+.happy {
+  -webkit-animation: happy1 $adTime linear;
+}
+
+$happy1x: 5px;
+
+@-webkit-keyframes happy1 {
+  10% { -webkit-transform: translate(-$happy1x);}
+  20% { -webkit-transform :translate($happy1x);}
+  30% { -webkit-transform: translate(-$happy1x);}
+  40% { -webkit-transform :translate($happy1x);}
+  50% { -webkit-transform: translate(-$happy1x);}
+  60% { -webkit-transform :translate($happy1x);}
+  70% { -webkit-transform: translate(-$happy1x);}
+  80% { -webkit-transform :translate($happy1x);}
+  90% { -webkit-transform :translate(-$happy1x);}
+}
+
+// angry
+.angry {
+  -webkit-animation: angry1 $adTime linear;
+}
+
+$angryy: 10px;
+@-webkit-keyframes angry1 {
+  10% { -webkit-transform: translateY(-$angryy);}
+  20% { -webkit-transform :translateY($angryy);}
+  30% { -webkit-transform: translateY(-$angryy);}
+  40% { -webkit-transform :translateY($angryy);}
+  50% { -webkit-transform: translateY(-$angryy);}
+  60% { -webkit-transform :translateY($angryy);}
+  70% { -webkit-transform: translateY(-$angryy);}
+  80% { -webkit-transform :translateY($angryy);}
+  90% { -webkit-transform :translateY(-$angryy);}
+}
+
+.condition {
+  color: #f780b6;
+  position: absolute;
+  font-size: 2.0em;
+  font-weight: bold;
+  top: 0px;;
+  left: 80px;
+  margin-left: 5px;
+}
+
+ul {
+  list-style: none;
+}
+
+
+
+

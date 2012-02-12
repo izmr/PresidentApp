@@ -3,6 +3,21 @@
 $margin: 95px;
 
 #battle-page {
+  #battle-status {
+    @include text-border(darken($base-bg-color, 0));
+    width: 290px;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    margin: 0 auto 5px;
+    padding: 5px 0;
+    text-align: center;
+
+    .value, .next {
+      letter-spacing: 2px;
+    }
+  }
+
   #field {
     position: relative;
     padding: 10px 0;
@@ -12,6 +27,19 @@ $margin: 95px;
 
     .follower-card {
       position: absolute;
+    }
+
+    #damage-message {
+      @include text-border(white);
+      @include transform(rotate(5deg));
+      display: none;
+      top: 15px;
+      left: 130px;
+      font-size: 23px;
+      font-weight: bold;
+      color: #c00;
+      position: absolute;
+      z-index: 1000;
     }
 
     #princess {
@@ -32,6 +60,17 @@ $margin: 95px;
       top: 165px;
       left: 198px;
     }
+  }
+
+  #user-status {
+    @include text-border(darken($base-bg-color, 0));
+    font-weight: bold;
+    width: 290px;
+    padding: 5px 0;
+    text-align: center;
+    margin: 10px auto;
+    font-size: 14px;
+    line-height: 1.3;
   }
 }
 

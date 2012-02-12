@@ -146,7 +146,7 @@
 
   // coinが上から降ってくる
   function coin(){
-    $("#princess").append("<div id='coinAttack'><ul class='none'><li id='check'><img src='/assets/img/coin.jpeg'></li></ul></div>");
+    $("#princess").append("<div id='coinAttack'><ul class='none'><li id='check'><img src='img/coin.jpeg'></li></ul></div>");
     $("#check").bind("webkitAnimationEnd",function(){
       $("#coinAttack").remove();
       isAnimating = false;
@@ -158,7 +158,7 @@
 
   var coinIndex=0;
   function addCoin(){
-    $(".none").append("<li><img style='left: " + (Math.random()*100 -30)  + "px' src='/assets/img/coin.jpeg'></li>");
+    $(".none").append("<li><img style='left: " + (Math.random()*100 -30)  + "px' src='img/coin.jpeg'></li>");
     if(coinIndex<5){
       coinIndex+=1;
       setInterval(addCoin, Math.random() * 1000 + 100);
