@@ -1,0 +1,33 @@
+@charset 'utf-8';
+
+#president-page {
+  #profile {
+    font-size: 12px;
+
+    .icon {
+      margin: 5px;
+    }
+
+    .name {
+      display: inline;
+      font-size: 16px;
+      font-weight: bold;
+      margin-left: 5px;
+    }
+
+    .information {
+      @include inline-block;
+      margin-left: 5px;
+    }
+  }
+
+  #selected-princess {
+    @extend #profile;
+
+    .edit-button {
+      margin-top: 0;
+    }
+  }
+}
+
+

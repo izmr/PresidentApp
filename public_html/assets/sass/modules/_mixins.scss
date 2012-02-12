@@ -1,0 +1,9 @@
+@charset 'utf-8';
+
+@mixin text-border($color, $blur: 0) {
+  @include text-shadow(1px 0 $blur $color, 0 1px $blur $color, -1px 0 $blur $color, 0 -1px $blur $color, 1px 1px 0 $color, -1px 1px $blur $color, 1px -1px 0 $color, -1px -1px $blur $color);
+}
+
+@function font-size($num, $parent-font-size: 100%) {
+  @return round(100% + (($num - 13) * 7.5%)) * ((200% - $parent-font-size) / 100%);
+}

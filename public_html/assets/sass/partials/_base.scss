@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+
+html {
+  background-color: $base-bg-color;
+}
+
+// body要素スタイル
+body {
+  @include background(linear-gradient(lighten(#ff519f, 10), $base-bg-color));
+  -webkit-text-size-adjust: none;
+  color: $base-font-color;
+  line-height: $base-line-height;
+
+  font: {
+    family: $base-font-family;
+    size: $base-font-size-pixel;
+  }
+}
+
+// a要素スタイル
+a {
+  @include link-colors($link-color, $link-hover-color, $link-active-color,
+      $link-visited-color, $link-focus-color);
+}
+
+// h要素
+h1, h2, h3, h4, h5, h6 {
+  // subheadクラスを付けると非表示
+  &.subhead {
+    display: none;
+  }
+}
+
+//no break
+.nbr {
+  white-space: nowrap;
+}
+
+.hidden {
+  display: none;
+}
+

@@ -1,0 +1,527 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, ../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, ../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 24, ../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 26, ../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 28, ../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 101, ../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 30, ../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 114, ../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 4, ../sass/partials/_base.scss */
+html {
+  background-color: #94144f;
+}
+
+/* line 9, ../sass/partials/_base.scss */
+body {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ff84bb), color-stop(100%, #94144f));
+  background: -webkit-linear-gradient(#ff84bb, #94144f);
+  background: -moz-linear-gradient(#ff84bb, #94144f);
+  background: -o-linear-gradient(#ff84bb, #94144f);
+  background: -ms-linear-gradient(#ff84bb, #94144f);
+  background: linear-gradient(#ff84bb, #94144f);
+  -webkit-text-size-adjust: none;
+  color: #ffc4de;
+  line-height: 1.6em;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Mayryo", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 13px;
+}
+
+/* line 22, ../sass/partials/_base.scss */
+a {
+  color: white;
+}
+/* line 18, ../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:visited {
+  color: white;
+}
+/* line 21, ../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:focus {
+  color: white;
+}
+/* line 24, ../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:hover {
+  color: white;
+}
+/* line 27, ../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:active {
+  color: white;
+}
+
+/* line 30, ../sass/partials/_base.scss */
+h1.subhead, h2.subhead, h3.subhead, h4.subhead, h5.subhead, h6.subhead {
+  display: none;
+}
+
+/* line 36, ../sass/partials/_base.scss */
+.nbr {
+  white-space: nowrap;
+}
+
+/* line 40, ../sass/partials/_base.scss */
+.hidden {
+  display: none;
+}
+
+/* line 3, ../sass/partials/_follower.scss */
+.follower-cards {
+  text-align: center;
+}
+/* line 6, ../sass/partials/_follower.scss */
+.follower-cards li {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+}
+/* line 7, ../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
+.follower-cards li {
+  *display: inline;
+}
+/* line 9, ../sass/partials/_follower.scss */
+.follower-cards li.blank {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  width: 82px;
+  height: 116px;
+  border: 1px solid white;
+}
+
+/* line 18, ../sass/partials/_follower.scss */
+.follower-card {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  border: 3px solid #fca800;
+  padding-top: 2px;
+  width: 78px;
+  height: 110px;
+  background-color: white;
+  color: #555;
+  line-height: 1;
+}
+/* line 28, ../sass/partials/_follower.scss */
+.follower-card .icon {
+  display: block;
+  margin: 2px auto;
+}
+/* line 33, ../sass/partials/_follower.scss */
+.follower-card h1 {
+  text-align: left;
+  width: 70px;
+  height: 1em;
+  margin: 0 auto;
+  font-size: 12px;
+  overflow: hidden;
+}
+/* line 42, ../sass/partials/_follower.scss */
+.follower-card p {
+  font-size: 10px;
+}
+
+/* line 48, ../sass/partials/_follower.scss */
+.followers,
+.princesses {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 8px #670e37;
+  -webkit-box-shadow: 0 0 8px #670e37;
+  -o-box-shadow: 0 0 8px #670e37;
+  box-shadow: 0 0 8px #670e37;
+  width: 288px;
+  margin: 0 auto;
+}
+/* line 54, ../sass/partials/_follower.scss */
+.followers li:first-child article,
+.princesses li:first-child article {
+  -moz-border-radius-topleft: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -o-border-top-left-radius: 10px;
+  -ms-border-top-left-radius: 10px;
+  -khtml-border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -o-border-top-right-radius: 10px;
+  -ms-border-top-right-radius: 10px;
+  -khtml-border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top: 1px solid #84214e;
+}
+/* line 59, ../sass/partials/_follower.scss */
+.followers li:last-child article,
+.princesses li:last-child article {
+  -moz-border-radius-bottomleft: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -o-border-bottom-left-radius: 10px;
+  -ms-border-bottom-left-radius: 10px;
+  -khtml-border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -o-border-bottom-right-radius: 10px;
+  -ms-border-bottom-right-radius: 10px;
+  -khtml-border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+/* line 63, ../sass/partials/_follower.scss */
+.followers a,
+.princesses a {
+  text-decoration: none;
+}
+
+/* line 69, ../sass/partials/_follower.scss */
+.princess,
+.follower {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e9589b), color-stop(100%, #e22c80));
+  background: -webkit-linear-gradient(#e9589b, #e22c80);
+  background: -moz-linear-gradient(#e9589b, #e22c80);
+  background: -o-linear-gradient(#e9589b, #e22c80);
+  background: -ms-linear-gradient(#e9589b, #e22c80);
+  background: linear-gradient(#e9589b, #e22c80);
+  -moz-box-shadow: #f5b2d1 0 0 5px inset;
+  -webkit-box-shadow: #f5b2d1 0 0 5px inset;
+  -o-box-shadow: #f5b2d1 0 0 5px inset;
+  box-shadow: #f5b2d1 0 0 5px inset;
+  text-shadow: #3a081f 1px 1px 2px;
+  border: 1px solid #ac2c66;
+  border-top: 0;
+  font-size: 12px;
+  padding: 8px;
+  line-height: 1.2;
+  color: white;
+}
+/* line 82, ../sass/partials/_follower.scss */
+.princess .information,
+.follower .information {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  width: 200px;
+  margin-left: 5px;
+  padding: 3px;
+}
+/* line 7, ../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
+.princess .information,
+.follower .information {
+  *display: inline;
+}
+/* line 88, ../sass/partials/_follower.scss */
+.princess .information > div:first-child,
+.follower .information > div:first-child {
+  margin-bottom: 5px;
+}
+/* line 93, ../sass/partials/_follower.scss */
+.princess .name,
+.follower .name {
+  display: inline;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+/* line 99, ../sass/partials/_follower.scss */
+.princess .name:first-child,
+.follower .name:first-child {
+  margin-left: 0;
+}
+
+/* line 3, ../sass/partials/_buttons.scss */
+.button {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fdee00), color-stop(80%, #965d03), color-stop(85%, #965d03), color-stop(100%, #e0ab0d));
+  background: -webkit-linear-gradient(#fdee00, #965d03 80%, #965d03 85%, #e0ab0d);
+  background: -moz-linear-gradient(#fdee00, #965d03 80%, #965d03 85%, #e0ab0d);
+  background: -o-linear-gradient(#fdee00, #965d03 80%, #965d03 85%, #e0ab0d);
+  background: -ms-linear-gradient(#fdee00, #965d03 80%, #965d03 85%, #e0ab0d);
+  background: linear-gradient(#fdee00, #965d03 80%, #965d03 85%, #e0ab0d);
+  -moz-box-shadow: #670e37 2px 2px 10px;
+  -webkit-box-shadow: #670e37 2px 2px 10px;
+  -o-box-shadow: #670e37 2px 2px 10px;
+  box-shadow: #670e37 2px 2px 10px;
+  text-shadow: 1px 0 0 #a05608, 0 1px 0 #a05608, -1px 0 0 #a05608, 0 -1px 0 #a05608, 1px 1px 0 #a05608, -1px 1px 0 #a05608, 1px -1px 0 #a05608, -1px -1px 0 #a05608;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  background-color: #94144f;
+  color: white;
+  border: 1px solid #fdee00;
+  width: 180px;
+  padding: 14px 0;
+  margin: 15px auto;
+}
+
+/* line 22, ../sass/partials/_buttons.scss */
+.edit-button {
+  -moz-border-radius-topleft: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -o-border-top-left-radius: 10px;
+  -ms-border-top-left-radius: 10px;
+  -khtml-border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -o-border-top-right-radius: 10px;
+  -ms-border-top-right-radius: 10px;
+  -khtml-border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
+  -moz-box-shadow: 0 0 5px #670e37;
+  -webkit-box-shadow: 0 0 5px #670e37;
+  -o-box-shadow: 0 0 5px #670e37;
+  box-shadow: 0 0 5px #670e37;
+  text-decoration: none;
+  display: block;
+  margin: 10px auto 0;
+  background-color: #94144f;
+  border: 1px solid #ce3d7f;
+  border-bottom: 0;
+  padding-top: 7px;
+  width: 100px;
+  height: 23px;
+  text-align: center;
+}
+
+/* line 3, ../sass/partials/_layout.scss */
+#main {
+  padding: 10px;
+}
+/* line 6, ../sass/partials/_layout.scss */
+#main section {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c11a67), color-stop(100%, #94144f));
+  background: -webkit-linear-gradient(#c11a67, #94144f);
+  background: -moz-linear-gradient(#c11a67, #94144f);
+  background: -o-linear-gradient(#c11a67, #94144f);
+  background: -ms-linear-gradient(#c11a67, #94144f);
+  background: linear-gradient(#c11a67, #94144f);
+  -moz-box-shadow: 1px 1px 10px #510b2b;
+  -webkit-box-shadow: 1px 1px 10px #510b2b;
+  -o-box-shadow: 1px 1px 10px #510b2b;
+  box-shadow: 1px 1px 10px #510b2b;
+  margin-bottom: 8px;
+  border: 1px solid #d8669a;
+}
+/* line 13, ../sass/partials/_layout.scss */
+#main section > h1 {
+  line-height: 1;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 3px 0 10px;
+  text-align: center;
+}
+/* line 20, ../sass/partials/_layout.scss */
+#main section > h1:before {
+  content: '[';
+}
+/* line 24, ../sass/partials/_layout.scss */
+#main section > h1:after {
+  content: ']';
+}
+
+/* line 31, ../sass/partials/_layout.scss */
+#global-header {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #222222), color-stop(100%, #000000));
+  background: -webkit-linear-gradient(#222222, #000000);
+  background: -moz-linear-gradient(#222222, #000000);
+  background: -o-linear-gradient(#222222, #000000);
+  background: -ms-linear-gradient(#222222, #000000);
+  background: linear-gradient(#222222, #000000);
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  padding-top: 10px;
+  height: 24px;
+  line-height: 1;
+  color: white;
+  border-bottom: 1px solid #ec6fa8;
+}
+
+/* line 43, ../sass/partials/_layout.scss */
+#logo {
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('../img/common/logo.png?1328957789');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -moz-background-size: 240px, 94.5px;
+  -webkit-background-size: 240px, 94.5px;
+  -o-background-size: 240px, 94.5px;
+  background-size: 240px, 94.5px;
+  width: 240px;
+  height: 94.5px;
+  margin: 0 auto;
+}
+
+/* line 53, ../sass/partials/_layout.scss */
+.icon {
+  border: 1px solid gray;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+}
+/* line 59, ../sass/partials/_layout.scss */
+.icon.big {
+  width: 70px;
+  height: 70px;
+}
+
+/* line 4, ../sass/partials/_top.scss */
+#top-page .button {
+  margin-top: 30px;
+}
+
+/* line 4, ../sass/partials/_president.scss */
+#president-page #profile, #president-page #selected-princess {
+  font-size: 12px;
+}
+/* line 7, ../sass/partials/_president.scss */
+#president-page #profile .icon, #president-page #selected-princess .icon {
+  margin: 5px;
+}
+/* line 11, ../sass/partials/_president.scss */
+#president-page #profile .name, #president-page #selected-princess .name {
+  display: inline;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+/* line 18, ../sass/partials/_president.scss */
+#president-page #profile .information, #president-page #selected-princess .information {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  margin-left: 5px;
+}
+/* line 7, ../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
+#president-page #profile .information, #president-page #selected-princess .information {
+  *display: inline;
+}
+/* line 27, ../sass/partials/_president.scss */
+#president-page #selected-princess .edit-button {
+  margin-top: 0;
+}
+
+/* line 4, ../sass/partials/_deck.scss */
+#follower-page #deck {
+  padding: 5px 0 10px;
+}
+/* line 8, ../sass/partials/_deck.scss */
+#follower-page #followers-wrapper {
+  padding: 5px;
+}
+
+/* line 6, ../sass/partials/_battle.scss */
+#battle-page #field {
+  position: relative;
+  padding: 10px 0;
+  width: 290px;
+  height: 270px;
+  margin: 0 auto;
+}
+/* line 13, ../sass/partials/_battle.scss */
+#battle-page #field .follower-card {
+  position: absolute;
+}
+/* line 17, ../sass/partials/_battle.scss */
+#battle-page #field #princess {
+  left: 103px;
+}
+/* line 21, ../sass/partials/_battle.scss */
+#battle-page #field #follower1 {
+  top: 165px;
+  left: 10px;
+}
+/* line 26, ../sass/partials/_battle.scss */
+#battle-page #field #follower2 {
+  top: 165px;
+  left: 103px;
+}
+/* line 31, ../sass/partials/_battle.scss */
+#battle-page #field #follower3 {
+  top: 165px;
+  left: 198px;
+}

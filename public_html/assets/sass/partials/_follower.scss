@@ -1,0 +1,105 @@
+@charset 'utf-8';
+
+.follower-cards {
+  text-align: center;
+
+  li {
+    @include inline-block;
+
+    &.blank {
+      @include border-radius(10px);
+      width: $card-width - 2px;
+      height: $card-height - 2px;
+      border: 1px solid $card-bg-color;
+    }
+  }
+}
+
+.follower-card {
+  @include border-radius(10px);
+  border: 3px solid #fca800;
+  padding-top: 2px;
+  width: $card-width - 6px;
+  height: $card-height - 8px;
+  background-color: $card-bg-color;
+  color: #555;
+  line-height: 1;
+
+  .icon {
+    display: block;
+    margin: 2px auto;
+  }
+
+  h1 {
+    text-align: left;
+    width: 70px;
+    height: 1em;
+    margin: 0 auto;
+    font-size: 12px;
+    overflow: hidden;
+  }
+
+  p {
+    font-size: 10px;
+  }
+}
+
+.followers,
+.princesses {
+  @include border-radius(10px);
+  @include box-shadow(darken($base-bg-color, 10), 0, 0, 8px);
+  width: 288px;
+  margin: 0 auto;
+
+  li:first-child article {
+    @include border-top-radius(10px);
+    border-top: 1px solid darken($base-border-color, 20);
+  }
+
+  li:last-child article {
+    @include border-bottom-radius(10px);
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.princess,
+.follower {
+  $color: $base-bg-color;
+  @include background(linear-gradient(lighten($color, 30),
+    lighten($color, 20)));
+  @include box-shadow(lighten($base-bg-color, 50) 0 0 5px inset);
+  @include text-shadow(darken($base-bg-color, 20), 1px, 1px, 2px);
+  border: 1px solid darken($base-border-color, 10);
+  border-top: 0;
+  font-size: 12px;
+  padding: 8px;
+  line-height: 1.2;
+  color: white;
+
+  .information {
+    @include inline-block;
+    width: 200px;
+    margin-left: 5px;
+    padding: 3px;
+
+    > div:first-child {
+      margin-bottom: 5px;
+    }
+  }
+
+  .name {
+    display: inline;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 5px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+
